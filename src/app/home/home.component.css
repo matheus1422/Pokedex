@@ -1,0 +1,72 @@
+body.background {
+    background-image: url("/assets/image/bg-pokemon2.png");
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.card-pokemon {
+    cursor: pointer;
+    .card-pokemon-img {
+        width: 100%;
+        height: 100px;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-pokemon-details {
+        margin-bottom: 20px;
+        .title-pokemon {
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .badge {
+            background: #30a7d7;
+            font-size: 9px;
+            vertical-align: super;
+        
+        }
+    }
+}
+
+.btn-loadMore {
+    margin-bottom: 20px;
+    margin-top: 15px;
+    button {
+        background-color: #30a7d7;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        font-size: 12px;
+        padding: 5px;
+        width: 140px;
+    }
+}
+.green {
+    background: #9bcc50;
+}
+
+.imagem-container {
+    position: relative;
+  }
+  
+  .imagem-container img {
+    transition: transform 0.5s ease;
+  }
+  
+  .imagem-container.animacao img {
+    transform: scale(1.1);
+  }

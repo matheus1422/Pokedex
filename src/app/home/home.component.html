@@ -1,0 +1,28 @@
+<body class="background">
+    <div class="content">
+        <h1 class="title">Pokédex</h1>
+
+        <div class="container pt-3">
+            <div class="row">
+                <div class="col-sm-3" *ngFor="let pokemon of allPokemon; let i = index">
+                    <div class="card-pokemon" [routerLink]="['/pokemon-type', pokemon.types[0].type.name]">
+                        <div class="card-pokemon-img imagem-container" [ngClass]="{'animacao': imagemAtiva === i}"
+                            (mouseenter)="ativarImagem(i)" (mouseleave)="desativarImagem()">
+                            <img [src]="pokemon.sprites.front_default" alt="">
+                        </div>
+                        <div class="card-pokemon-details text-center">
+                            <p class=" title-pokemon mb-0">{{ pokemon.name }}</p>
+                            <span class="badge badge-pill green">{{pokemon.types[0].type.name}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-loadMore text-center ">
+            <button mat-fab extended color="primary" (click)="loadMorePokemon()">
+                Carregar mais
+            </button>
+        </div>
+    </div>
+</body>
